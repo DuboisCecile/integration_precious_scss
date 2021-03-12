@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+html {
+    width: 800px;
+    margin : 0 auto;
+  }
+
+body {
+    background: white;
+    padding : 5px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+  }
+
+nav ul li {
+    display: inline-block;
+    vertical-align: top;
+    /* border: rgb(112,112,112) 2px solid;
+    margin:0; */
+
+ }
+
+#FTP {
+    width: 25%;
+    background: rgb(26, 24, 24);
+    color: lightgray;
+}
+
+#Fellows {
+    width: 10%;
+    background: lightgray;
+    color: rgb(26, 24, 24);
+    font-size: 0.8rem;
+}
+
+#Contact {
+    width: 65%;
+    background: rgb(26, 24, 24);
+    color: lightgray;
+    font-size: 0.8rem;
+    text-align : left;
+    padding-left: 10px;
+}
+
+
+
+.carousel {    
+    /* height: 200px; */
+    width: 100%;
+}
+
+
+
+
+#FellowsDead {
+    height: 90px;
+    line-height: 90px;
+}
+
+#FellowsDead h2 {
+    font-size: 1.5rem;
+    color: rgb(112, 112, 112);
+    margin: 0;
+}
+
+#FellowsDead #textMini {
+    font-size: 1rem;
+}
+
+
+
+
+#articles {
+   width: 98%;
+   display: block;
+   margin: 0 auto;
+   padding:0;
+   padding-bottom: 90px;
+   border-bottom: rgb(112,112,112) 2px solid;
+   
+}
+
+article {
+    width: 32%;
+    height: 250px;
+    background: rgb(233, 233, 233);
+    display: inline-block;
+}
+
+#article1 {
+    margin-right : 1%;
+}
+
+#article3 {
+    margin-left : 1%;
+}
+
+form {
+    color:rgb(112, 112, 112);
+}
+
+#formContent {
+    margin: 50px auto 0px;;
+    width: 80%;
+}
+
+form h2 {
+    text-align: left;
+    margin: 15px 10px 20px;
+}
+
+.formItemBorder {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+    margin: 10px auto;
+    padding: 2px 0;
+    border:rgb(112, 112, 112) 2px solid;
+}
+
+select {
+    /* display: block; */
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+    margin: 10px auto;
+    padding: 2px 0;
+    border:rgba(112, 112, 112, 0.5) 0.2px solid;
+}
+
+form textarea {
+    height: 5rem;
+}
+
+form textarea::placeholder {
+    font-size: 0.6rem;;
+    color:rgba(112, 112, 112, 0.5);
+}
