@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+$main-color: rgb(255, 95, 1);
+$second-color: rgb(255,230, 200);
+$background-color: rgb(245, 240, 235);
+
+@font-face {
+	font-family: 'tolkien_style';
+	src: url('anirb___.ttf') format('truetype');
+}
+
+
+html {
+    width: 1100px;
+    margin : 0 auto;
+}
+
+body {
+    background: $background-color;
+    margin: 0;
+    font-family: "tolkien_style", sans-serif;      
+}
+
+nav {
+    background: $main-color;
+    color: $second-color;
+    padding : 10px;
+}
+
+nav ul {
+    list-style: none;
+    display : flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.li-border {
+    padding-right : 20px; 
+    border-right: 3px solid #FBD1A3;
+}
+
+#FTP {
+    font-size: 1.2rem;
+    flex-grow:  0.2;
+    text-align: left;
+}
+
+main {    
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 100px;
+}
+
+.the-one {
+    margin: 80px auto;
+}
+
+@mixin ring ($size, $color) {
+    display: inline-block;
+    vertical-align: middle;
+    width : $size;
+    height: $size;
+    border: $size/15 solid $color;
+    border-radius : 50%;
+    box-shadow : $size/30 $size/30 $size/20 0 darken($color, 20), 
+    inset $size/30 $size/30 $size/20 0 darken($color, 20);
+}
+
+.orange-ring {
+    @include ring(75px, $main-color);
+}
+
+.yellow-ring {
+    @include ring(200px, rgb(250,200,1));
+}
+
+@for $i from 1 through 6{
+	.black-ring:nth-child(#{$i}){
+		@include ring($i*10+30px, black);
+        @if $i != 1 {
+            margin-left: -(30px + $i*4);
+        }
+	}
+}
+
+
+footer {
+    background: $main-color;
+    color: $second-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 40px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas :
+    "A D G"
+    "B E H"
+    "C F H";
+    padding: 20px 40px;
+}
+
+footer>div {
+    text-align: left;
+    align-self: center;
+}
+
+.div1 { grid-area: A; }
+.div2 { grid-area: B; }
+.div3 { grid-area: C; }
+.div4 { grid-area: D; }
+.div5 { grid-area: E; }
+.div6 { grid-area: F; }
+.div7 { grid-area: G; }
+.div8 { grid-area: H; }
+
+#follow-twitter {
+    font-size: 0.8rem;
+    text-align: left;
+}
